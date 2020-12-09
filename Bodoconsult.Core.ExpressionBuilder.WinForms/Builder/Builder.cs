@@ -20,17 +20,19 @@ namespace Bodoconsult.Core.ExpressionBuilder.WinForms.Builder
         
 		static Builder()
 		{
-			Expressions = new Dictionary<Operation, Func<Expression, Expression, Expression>>();
-			Expressions.Add(Operation.Equals, Expression.Equal);
-			Expressions.Add(Operation.NotEquals, Expression.NotEqual);
-			Expressions.Add(Operation.GreaterThan, Expression.GreaterThan);
-			Expressions.Add(Operation.GreaterThanOrEquals, Expression.GreaterThanOrEqual);
-			Expressions.Add(Operation.LessThan, Expression.LessThan);
-			Expressions.Add(Operation.LessThanOrEquals, Expression.LessThanOrEqual);
-			Expressions.Add(Operation.Contains, Contains);
-            Expressions.Add(Operation.StartsWith, (member, constant) => Expression.Call(member, startsWithMethod, constant));
-            Expressions.Add(Operation.EndsWith, (member, constant) => Expression.Call(member, endsWithMethod, constant));
-		}
+            Expressions = new Dictionary<Operation, Func<Expression, Expression, Expression>>
+            {
+                {Operation.Equals, Expression.Equal},
+                {Operation.NotEquals, Expression.NotEqual},
+                {Operation.GreaterThan, Expression.GreaterThan},
+                {Operation.GreaterThanOrEquals, Expression.GreaterThanOrEqual},
+                {Operation.LessThan, Expression.LessThan},
+                {Operation.LessThanOrEquals, Expression.LessThanOrEqual},
+                {Operation.Contains, Contains},
+                {Operation.StartsWith, (member, constant) => Expression.Call(member, startsWithMethod, constant)},
+                {Operation.EndsWith, (member, constant) => Expression.Call(member, endsWithMethod, constant)}
+            };
+        }
 		
 		public static Expression<Func<T, bool>> GetExpression<T>(IFilter<T> filter) where T : class
         {

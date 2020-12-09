@@ -2,7 +2,8 @@
 
 Bodoconsult.Core.ExpressionBuilder is intended to provide enhanced search features on entitiy classes for user interfaces like WinForms, WPF or Xamarin Forms.
 
-Bodoconsult.Core.ExpressionBuilder is based on the work of David Belmont. See licence file and https://github.com/dbelmont/ExpressionBuilder/tree/master/ExpressionBuilder .
+Bodoconsult.Core.ExpressionBuilder is based on the work of David Belmont. See licence file and <https://github.com/dbelmont/ExpressionBuilder/tree/master/ExpressionBuilder>. 
+We did some changes for better fit to our projects.
 
 # How to use the library
 

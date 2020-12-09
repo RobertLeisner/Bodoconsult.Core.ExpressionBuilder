@@ -38,8 +38,13 @@ namespace Bodoconsult.Core.ExpressionBuilder.Test
                 Thread.CurrentThread.CurrentCulture = culture;
                 Thread.CurrentThread.CurrentUICulture = culture;
 
+                I18NHelper.LoadLanguage(culture.TwoLetterISOLanguageName);
             }
-
+            else
+            {
+                I18NHelper.LoadDefaultLanguage();
+            }
+            
 
             var items = OperationHelper.GetSupportedOperationsDisplayItemsLocalized(typeof(string));
 

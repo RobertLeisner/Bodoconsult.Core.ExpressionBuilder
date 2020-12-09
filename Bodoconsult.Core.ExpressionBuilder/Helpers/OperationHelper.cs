@@ -151,7 +151,7 @@ namespace Bodoconsult.Core.ExpressionBuilder.Helpers
                 .Select(o => new DisplayItem
                 {
                     Id = o.ToString(),
-                    Name = o.GetDescription(Resources.Operations.ResourceManager)
+                    Name = o.GetDescription()
                 })
                 .ToArray();
 
