@@ -15,10 +15,14 @@ The source code contains a NUnit test class, the following source code is extrac
 
 This example shows how to get the queryable properties of a class Person. It provides the properties in a non-localized fashion, means the original property names are used.
 
+``` csharp
+
             var result = ExpressionPropertiesHelper.LoadPropertyCollection<Person>();
             result.LoadProperties(null);
 
             var properties = result.ToList();
+			
+```
 
 ### Localized properties
 
@@ -33,16 +37,20 @@ Create a resx file for the class like with normal builtin C# localization. Here 
 
 Then call LoadProperties with adequate ResourceManager:
 
+``` csharp
 
             var result = ExpressionPropertiesHelper.LoadPropertyCollection<Person>();
             result.LoadProperties(Resources.Person.ResourceManager);
 
             var properties = result.ToList();
 
+```
 
 ## Building and using an expression
 
 The following example shows how to use  
+
+``` csharp
 
         [TestCase(TestName="Build expression from a filter with property chain filter statements")]
         public void BuilderWithPropertyChainFilterStatements()
@@ -60,6 +68,8 @@ The following example shows how to use
             
             Assert.That(people, Is.EquivalentTo(solution));
         }
+
+```
 
 ## User interface integration
 

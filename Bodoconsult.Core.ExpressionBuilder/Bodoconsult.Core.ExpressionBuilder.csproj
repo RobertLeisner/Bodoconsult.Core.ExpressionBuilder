@@ -7,15 +7,16 @@
     <RepositoryUrl>https://github.com/RobertLeisner/Bodoconsult.Core.ExpressionBuilder</RepositoryUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageId>Bodoconsult.Core.ExpressionBuilder</PackageId>
-    <Version>1.0.0</Version>
+    <Version>1.0.1</Version>
     <Authors>Robert Leisner</Authors>
     <Company>Bodoconsult EDV-Dienstleistungen GmbH</Company>
     <RepositoryType>git</RepositoryType>
     <PackageTags>LINQ query dynamic expression</PackageTags>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Description>Expression build class to generate LINQ query expressions dynamically</Description>
+    <Description>Expression builder class to generate LINQ query expressions dynamically</Description>
     <PackageReleaseNotes>First draft</PackageReleaseNotes>
     <PackageProjectUrl>https://github.com/RobertLeisner/Bodoconsult.Core.ExpressionBuilder</PackageProjectUrl>
+	<NeutralLanguage>en</NeutralLanguage>
   </PropertyGroup>
 
   <ItemGroup>

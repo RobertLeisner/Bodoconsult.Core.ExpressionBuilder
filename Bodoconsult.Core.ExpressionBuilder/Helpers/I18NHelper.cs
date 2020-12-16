@@ -32,7 +32,7 @@ namespace Bodoconsult.Core.ExpressionBuilder.Helpers
 
             foreach (var locales in localeResources)
             {
-                var key = locales.Substring(len, locales.Length - len - 4).ToUpperInvariant();
+                var key = locales.Substring(len, locales.Length - len - 3).ToUpperInvariant();
 
                 Languages.Add(new KeyValuePair<string, string>(key, locales));
 
